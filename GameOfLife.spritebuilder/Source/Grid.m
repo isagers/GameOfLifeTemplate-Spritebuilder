@@ -94,7 +94,7 @@ static const int GRID_COLUMNS = 10;
                     BOOL isIndexValid;
                     isIndexValid = [self isIndexValidForX:x andY:y];
                     //skip over offscreen cells and the current cell
-                    if(!((x == i)&&(y==i)) && isIndexValid){
+                    if(!((x == i)&&(y==j)) && isIndexValid){
                         Creature *neighbor = _gridArray[x][y];
                         if(neighbor.isAlive){
                             currentCreature.livingNeighbors += 1;
