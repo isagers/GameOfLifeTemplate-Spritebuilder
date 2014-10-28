@@ -80,7 +80,7 @@ static const int GRID_COLUMNS = 10;
 
 -(void)countNeighbors{
     //iterate through the rows
-    for(int i = 0; i < [_gridArray.count]; i++){
+    for(int i = 0; i < _gridArray.count; i++){
         //iterate through columns
         for(int j = 0; j < [_gridArray[i] count]; j++){
             //acess the creature in the cell
@@ -115,8 +115,8 @@ static const int GRID_COLUMNS = 10;
 }
 
 -(void)updateCreatures{
-    for(int i = 0; i < [_gridArray.count]; i++){
-        for(int j = 0; j <[_gridArray.count]; j++){
+    for(int i = 0; i < _gridArray.count; i++){
+        for(int j = 0; j < _gridArray.count; j++){
             Creature *currentCreature = _gridArray[i][j];
             if(currentCreature.livingNeighbors == 3){
                 currentCreature.isAlive = YES;
